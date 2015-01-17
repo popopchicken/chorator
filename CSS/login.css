@@ -1,0 +1,25 @@
+body {
+	background-color: #2cacfb;
+}
+
+button {
+	background-color: #0264ad;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;margin-top:5%;
+	/*margin-bottom:0%;*/
+	border-radius: 8px;
+	border: none;
+	width: 100%;
+	height: 100%; 
+	padding: 2%;
+	color: #b4bfae;
+}
+
+img {
+	margin-left:auto;
+	margin-right:auto;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+}
