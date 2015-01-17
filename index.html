@@ -3,15 +3,46 @@
 <html>
 <head>
 	<title>Chorator Login</title>
+	<link rel="icon" href="img/favicon.ico">
 	<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="bootstrap/dist/css/signin.css" rel="stylesheet"> 
 	<link href="CSS/login.css" rel="stylesheet"> 
-
+	
 	<style></style> 
 </head>
 
 <body>
+	<script>
+	function checkUser()
+	{
+		var email=Document.getElementById("inputEmail").value;
+		var password=Document.getElementById("inputPassword").value;
+
+		 var rawFile = new XMLHttpRequest();
+    	rawFile.open("GET", "list.txt", false);
+    	rawFile.onreadystatechange = function ()
+    	{
+        	if(rawFile.readyState === 4)
+        	{
+            	if(rawFile.status === 200 || rawFile.status == 0)
+            	{
+                	var allText = rawFile.responseText;
+					if(allText.indexOf(email + "," + password + "\n") != -1)
+                	{
+                    	alert("test");
+                	}
+            	}
+        	}
+    	}
+    	alert("test");
+    	rawFile.send(null);
+    }
+
+    //return false;
+//}
+
+	</script>
 	<div class="container">
 		<form class="form-signin">
 
@@ -21,12 +52,12 @@
 			<label for="inputEmail" class="sr-only">Home Name</label>
 			<input type="email" id="inputEmail" class="form-control" placeholder="Home Name" required focus>
 
-
 			<label for="inputPassword" class="sr-only">Password</label>
 			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required focus>
 
-			<button class="LoginButton" type="submit">Submit</button>
-			<button class="SignUpButton" type="submit">Sign Up</button>
+			<button class="LoginButton" onClick="return checkUser()">Submit</button>
+			</form>
+			<a href="signup.html"><button class="signupbutton">Sign Up</button></a>
 
 
 	</div>

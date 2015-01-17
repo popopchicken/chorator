@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="img/favicon.ico">
 
     <title>Dashboard Template for Bootstrap</title>
 
@@ -14,29 +14,16 @@
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link href="CSS/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
  
     <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-    <script type="text/Javascript">
-      function addTask() 
-      { 
-        var button = document.createElement("button");
-        button.innerHTML = document.getElementById("taskName").value; //retrieve user input
-        document.getElementById("task").appendChild(button);      
-
-        document.getElementById("taskName").value = ""; //Reset to placeholder for input field
-
-        return false; //Want a false submit after the onSubmit so that page is not refreshed
-      }
-    </script>
   </head>
 
   <body>
 
   <div class="col-md-9 col-md-offset-3">
-  
   </div>
 
      <div class="container-fluid">
@@ -50,27 +37,23 @@
             <div class="container-fluid">
               <div class="navbar-header">
                 <div class="navbar-header-content">
-                 <h1><img src="img/logo.png" class="logo">Chorator</h1>
+                 <h1><img src="img/logo.png" class="logo"> Chorator </h1>
                  
                 </div>
               </div>
         
             </div>
           </nav>
-          <h1 style="font-size: 800%;">Tasks</h1>
-          <!--<button type="button" class="btn btn-lg btn-default" aria-label="Plus">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          </button> -->
-          <div id="task"> </div> <!--Placeholder for the user input tasks buttons-->
+<<<<<<< HEAD
           <h1 style="font-size: 800%;">Chores</h1><button type="button" class="btn btn-lg btn-default" aria-label="Plus"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
-    
+          
+=======
+
+          <!--<h1 style="font-size: 800%;">Tasks <button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></h1>-->
+
+          <h1 style="font-size: 800%;">Tasks</h1><button type="button" class="btn btn-lg btn-default" aria-label="Plus"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
           <div class="input-group input-group-lg">
-            <form onsubmit="return addTask();">
-              <input type="text" class="form-control" placeholder="Task Name" aria-describedby="task name" value="" id="taskName">
-            </form>  
-            <input type='text' id='nameInput' placeholder='Name'>
-            <input type='text' id='messageInput' placeholder='Message'>
-            <!--    
+>>>>>>> 53c71ddc0d1e45986d76eb8af73336fa69ba7953
             <input type="text" class="form-control" placeholder="Task Name" aria-describedby="task name">
             <div id='messagesDiv'></div>
             <span class="input-group input-group-lg"><input type='text' class="form-control" id='taskName' placeholder='Task Name'><input type='text' class="form-control" id='nameInput' placeholder='Name'></span>

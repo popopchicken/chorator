@@ -27,6 +27,10 @@ body {
   background-color: #2cacfb;
 }
 
+.navbar-header {
+  align: right;
+}
+
 /*
  * Sidebar
  */
@@ -105,4 +109,9 @@ body {
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
 }
