@@ -27,6 +27,10 @@ body {
   background-color: #2cacfb;
 }
 
+.navbar-header {
+  align: right;
+}
+
 /*
  * Sidebar
  */
