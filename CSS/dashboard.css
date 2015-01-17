@@ -1,0 +1,20 @@
+body {
+	color: #333;
+}
+
+.full {
+	width: 100%;
+	height: 10%;
+	position: fixed;
+	background: #0264ad;
+}
+
+.side-panel {
+	z-index: 1000;
+    position: fixed;
+    left: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #2cacfb;
+}
