@@ -6,14 +6,32 @@
 			function addTask() 
 			{
 				var button = document.createElement("button");
-				button.value = "I'm a button"; 
-				document.body.appendChild(button);			
+				button.innerHTML = document.getElementById("taskName").value;
+				//var i;
+				//for(i=0; i<2;  i++)
+				//{
+					document.getElementById("task")[i].appendChild(button);
+				//} 
+				//document.getElementById("task").appendChild("<br/>"); 
+				//document.getElementById("newline").innerHTML = "</br>";
+
+				document.getElementById("taskName").value = ""; 
+
+				return false;			
 			}
 		</script>
 	</head>
 	<body>
-		<button onclick="addTask(); "> + </button>	
+		<!--<button onclick="return addTask(); "> + </button>	-->
 		<h2> Task </h2>
- 		<p id="task" ></p>
+
+ 		<div id="task" ></div>
+ 		<div id="newline"> </div>
+
+ 		<form onsubmit="return addTask();" >
+              <input type="text" class="form-control" placeholder="Task Name" id="taskName">
+        </form> 
+
+ 		<h3> Under Task </h3>
 	</body>
 </html>

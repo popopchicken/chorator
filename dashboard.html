@@ -15,9 +15,21 @@
 
     <!-- Custom styles for this template -->
     <link href="CSS/dashboard.css" rel="stylesheet">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> -->
  
     <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+    <script type="text/Javascript">
+      function addTask() 
+      { 
+        var button = document.createElement("button");
+        button.innerHTML = document.getElementById("taskName").value; //retrieve user input
+        document.getElementById("task").appendChild(button);      
+
+        document.getElementById("taskName").value = ""; //Reset to placeholder for input field
+
+        return false; //Want a false submit after the onSubmit so that page is not refreshed
+      }
+    </script>
   </head>
 
   <body>
@@ -44,11 +56,18 @@
         
             </div>
           </nav>
-          <h1 style="font-size: 800%;">Tasks</h1><button type="button" class="btn btn-lg btn-default" aria-label="Plus"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+          <h1 style="font-size: 800%;">Tasks</h1>
+          <!--<button type="button" class="btn btn-lg btn-default" aria-label="Plus">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          </button> -->
+          <div id="task"> </div> <!--Placeholder for the user input tasks buttons-->
           <div class="input-group input-group-lg">
-            <input type="text" class="form-control" placeholder="Task Name" aria-describedby="task name">
+            <form onsubmit="return addTask();">
+              <input type="text" class="form-control" placeholder="Task Name" aria-describedby="task name" value="" id="taskName">
+            </form>  
             <input type='text' id='nameInput' placeholder='Name'>
-            <input type='text' id='messageInput' placeholder='Message'>    
+            <input type='text' id='messageInput' placeholder='Message'>
+            <!--    
             <script>
                 var myDataRef = new Firebase('https://d6sx6gmrk7r.firebaseio-demo.com/');
                 $('#messageInput').keypress(function (e) {
@@ -59,7 +78,7 @@
                     $('#messageInput').val('');
                   }
                 }
-            </script> 
+            </script>  -->
 
           </div>
         </div>
