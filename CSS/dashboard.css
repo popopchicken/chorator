@@ -34,7 +34,7 @@ body {
 /* Hide for mobile, show later */
 .sidebar {
   display: none;
-  color: #b4bfae;
+  color: #DBF2F2;
 }
 @media (min-width: 768px) {
   .sidebar {
