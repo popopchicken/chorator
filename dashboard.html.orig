@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="img/favicon.ico">
 
     <title>Dashboard Template for Bootstrap</title>
 
@@ -24,7 +24,6 @@
   <body>
 
   <div class="col-md-9 col-md-offset-3">
-  
   </div>
 
      <div class="container-fluid">
