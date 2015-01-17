@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-<script type="text/Javascript">
-
 function checkUser(username, password, file)
 {
 //function readTextFile(file)
@@ -28,8 +23,4 @@ function checkUser(username, password, file)
 }
 
 //test call
-//checkUser("Brandon", "bjpitts", "list.txt");
-
-</script>
-</body>
-</html>
+checkUser("Brandon", "bjpitts", "list.txt");
